@@ -12,6 +12,7 @@ The following organizations are listed in the CollaboratorsCarousel component:
 - Child at Street 11
 - Mom Don't Cry Foundation
 - National University Singapore
+- Nanyang Technological University
 - MakeIT at Libraries
 - Robotic Games Society Singapore
 

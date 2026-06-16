@@ -39,6 +39,10 @@ function CollaboratorsCarousel() {
       image: "/partners/national-university-singapore.png"
     },
     {
+      name: "Nanyang Technological University",
+      image: "/logos/ntu-wordmark.svg"
+    },
+    {
       name: "MakeIT at Libraries",
       image: "/partners/MakeIT-at-Libraries.png"
     },
