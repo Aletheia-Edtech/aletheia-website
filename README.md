@@ -7,8 +7,8 @@ Every page is built to plain HTML at deploy time.
 
 | Route | Source | What it shows |
 |---|---|---|
-| `/` | `app/page.tsx` | Home: who we are, what we do, collaborators |
-| `/about` | `app/about/page.tsx` | About us, and the "Trusted by" partner logos (`public/partners/`) |
+| `/` | `app/page.tsx` | Home: who we are and what we do |
+| `/about` | `app/about/page.tsx` | About us, the collaborators carousel and the "Trusted by" partner logos (`public/partners/`) |
 | `/stem-for-all` | `app/stem-for-all/` | The STEM for All programme |
 | `/tech4all` | `app/tech4all/page.tsx` | The Tech4All programme |
 | `/gallery` | `app/gallery/page.tsx` | Event videos and photos (`public/gallery/photos/`) |
@@ -18,7 +18,8 @@ Shared parts: `components/nav.tsx`, `components/footer.tsx`, the Sparkie mascot 
 `components/animations/`. `components/ui/` is the stock shadcn/ui kit.
 
 How to add a gallery photo or a partner logo: `public/gallery/photos/README.md`, `app/gallery/README.md` and
-`public/partners/README.md`.
+`public/partners/README.md`. Hosting, accounts, publishing and the contact-form settings:
+[docs/OPERATIONS.md](docs/OPERATIONS.md).
 
 ## Stack
 
