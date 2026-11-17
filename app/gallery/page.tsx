@@ -2,12 +2,35 @@
 
 import { X, Play } from "lucide-react"
 import { useState } from "react"
+import { motion } from "framer-motion"
 import Link from "next/link"
 import { Nav } from "@/components/nav"
 import { Footer } from "@/components/footer"
 
+type GalleryFilter = "all" | "video" | "photo"
+
+const FILTERS: { value: GalleryFilter; label: string }[] = [
+  { value: "all", label: "All" },
+  { value: "video", label: "Videos" },
+  { value: "photo", label: "Photos" },
+]
+
+type YearFilter = number | "all"
+
 export default function Gallery() {
   const [activeVideo, setActiveVideo] = useState<number | null>(null)
+  const [filter, setFilter] = useState<GalleryFilter>("all")
+  const [year, setYear] = useState<YearFilter>("all")
+
+  const handleFilterChange = (value: GalleryFilter) => {
+    setFilter(value)
+    setActiveVideo(null)
+  }
+
+  const handleYearChange = (value: YearFilter) => {
+    setYear(value)
+    setActiveVideo(null)
+  }
 
   const handleVideoClick = (videoId: number) => {
     setActiveVideo(activeVideo === videoId ? null : videoId)
@@ -39,6 +62,7 @@ export default function Gallery() {
     {
       id: 1,
       type: "video",
+      year: 2025,
       src: "https://img.youtube.com/vi/3z-Bf7_tB2g/maxresdefault.jpg",
       videoUrl: "https://youtu.be/3z-Bf7_tB2g",
       title: "STEM for ALL x NTU LPD Collaboration with Project LOVE",
@@ -50,6 +74,7 @@ export default function Gallery() {
     {
       id: 2,
       type: "video",
+      year: 2025,
       src: "https://img.youtube.com/vi/OKZwinw3kko/maxresdefault.jpg",
       videoUrl: "https://youtu.be/OKZwinw3kko",
       title: "STEM for All: Equitable Learning",
@@ -60,6 +85,7 @@ export default function Gallery() {
     {
       id: 3,
       type: "video",
+      year: 2025,
       src: "https://img.youtube.com/vi/peewpaS8_Bg/maxresdefault.jpg",
       videoUrl: "https://youtu.be/peewpaS8_Bg",
       title: "Prof Marcelo Ang: Educational Leadership and Innovation in STEM",
@@ -71,6 +97,7 @@ export default function Gallery() {
     {
       id: 4,
       type: "video",
+      year: 2025,
       src: "https://img.youtube.com/vi/sp39XrJA0HE/maxresdefault.jpg",
       videoUrl: "https://youtu.be/sp39XrJA0HE",
       title: "Mom Don't Cry Foundation: A Story of Resilience and Hope",
@@ -81,6 +108,7 @@ export default function Gallery() {
     {
       id: 5,
       type: "video",
+      year: 2025,
       src: "https://img.youtube.com/vi/jwfFaKxnsGY/hqdefault.jpg",
       videoUrl: "https://youtu.be/jwfFaKxnsGY",
       title: "Child at Street 11 Kids: Inspiring Journeys",
@@ -91,6 +119,7 @@ export default function Gallery() {
     {
       id: 6,
       type: "video",
+      year: 2025,
       src: "https://img.youtube.com/vi/u_bBdjv48iI/maxresdefault.jpg",
       videoUrl: "https://youtu.be/u_bBdjv48iI",
       title: "STEM FOR ALL x NTU LDP Charity Drive: Robot Parade",
@@ -102,6 +131,7 @@ export default function Gallery() {
     {
       id: 7,
       type: "video",
+      year: 2025,
       src: "https://img.youtube.com/vi/y5VDXxmRYKw/maxresdefault.jpg",
       videoUrl: "https://youtu.be/y5VDXxmRYKw",
       title: "Official Opening Speech By Dr. Sein",
@@ -148,6 +178,7 @@ export default function Gallery() {
     {
       id: 12,
       type: "video",
+      year: 2025,
       src: "https://img.youtube.com/vi/EoqljUsniQg/hqdefault.jpg",
       videoUrl: "https://www.youtube.com/watch?v=EoqljUsniQg",
       title: "In Conversation with Sparkie",
@@ -158,6 +189,7 @@ export default function Gallery() {
     {
       id: 13,
       type: "photo",
+      year: 2025,
       src: "/gallery/photos/events/SparkOS x Ugly duck school Yunan\u00A02025.jpg",
       title: "STEM for All x SparkOS Trailblazing in China, Yunnan. 2025",
       description:
@@ -167,6 +199,7 @@ export default function Gallery() {
     {
       id: 14,
       type: "photo",
+      year: 2025,
       src: "/gallery/photos/events/SparkOS x Yuegu Foshan\u00A02025.jpg",
       title: "STEM for All x SparkOS Kiai in China, Foshan. 2025",
       description:
@@ -176,6 +209,7 @@ export default function Gallery() {
     {
       id: 15,
       type: "photo",
+      year: 2025,
       src: "/gallery/photos/events/SparkOS x STEM for All x Maker Festival 2025 Guangzhou.jpg.jpg",
       title: "SparkOS Team at Maker Faire 2025, Guangzhou",
       description:
@@ -185,6 +219,7 @@ export default function Gallery() {
     {
       id: 16,
       type: "photo",
+      year: 2025,
       src: "/gallery/photos/events/SparkOS x Beijing\u00A02025.jpg",
       title: "STEM for All x SparkOS at China, Beijing. 2025",
       description:
@@ -194,6 +229,7 @@ export default function Gallery() {
     {
       id: 17,
       type: "photo",
+      year: 2026,
       src: "/gallery/photos/events/stem-for-all-canossaville-june-2026.jpg",
       title: "STEM for All x Canossaville Children and Community Services",
       description:
@@ -203,6 +239,7 @@ export default function Gallery() {
     {
       id: 18,
       type: "photo",
+      year: 2026,
       src: "/gallery/photos/events/stem-for-all-chij-sanctuary-september-2026.jpg",
       title: "STEM for All x CHIJ Sanctuary for Children",
       description:
@@ -210,6 +247,28 @@ export default function Gallery() {
       speaker: "In partnership with CHIJ Sanctuary for Children · September 2026",
     },
   ]
+
+  // The type and year filters combine; each button's count reflects the other filter's choice.
+  const matches = (item: (typeof galleryItems)[number], type: GalleryFilter, itemYear: YearFilter) =>
+    (type === "all" || item.type === type) && (itemYear === "all" || item.year === itemYear)
+  const visibleItems = galleryItems.filter((item) => matches(item, filter, year))
+  const typeCount = (value: GalleryFilter) => galleryItems.filter((item) => matches(item, value, year)).length
+  const yearCount = (value: YearFilter) => galleryItems.filter((item) => matches(item, filter, value)).length
+  // Items without a known year appear only under "All years".
+  const years = Array.from(
+    new Set(galleryItems.map((item) => item.year).filter((value): value is number => typeof value === "number")),
+  ).sort((a, b) => a - b)
+  const yearOptions: { value: YearFilter; label: string }[] = [
+    { value: "all", label: "All years" },
+    ...years.map((value) => ({ value, label: String(value) })),
+  ]
+
+  const pillClass = (selected: boolean) =>
+    `text-xs uppercase tracking-wider px-4 py-2 rounded-full border transition-colors disabled:opacity-40 disabled:cursor-not-allowed ${
+      selected
+        ? "bg-neutral-900 text-white border-neutral-900"
+        : "text-neutral-600 border-neutral-300 enabled:hover:border-neutral-900 enabled:hover:text-neutral-900"
+    }`
 
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900 font-serif flex flex-col">
@@ -226,8 +285,57 @@ export default function Gallery() {
 
         {/* Gallery Grid */}
         <section className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12">
-            {galleryItems.map((item) => (
+          {/* Filters: type and year */}
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 mb-12">
+            <div role="group" aria-label="Filter by type" className="flex flex-wrap justify-center gap-2">
+              {FILTERS.map(({ value, label }) => {
+                const count = typeCount(value)
+                return (
+                  <button
+                    key={value}
+                    type="button"
+                    aria-pressed={filter === value}
+                    disabled={count === 0 && filter !== value}
+                    onClick={() => handleFilterChange(value)}
+                    className={pillClass(filter === value)}
+                  >
+                    {label}
+                    <span className={`ml-2 ${filter === value ? "text-neutral-300" : "text-neutral-400"}`}>{count}</span>
+                  </button>
+                )
+              })}
+            </div>
+
+            <div aria-hidden="true" className="hidden md:block w-px h-6 bg-neutral-300" />
+
+            <div role="group" aria-label="Filter by year" className="flex flex-wrap justify-center gap-2">
+              {yearOptions.map(({ value, label }) => {
+                const count = yearCount(value)
+                return (
+                  <button
+                    key={value}
+                    type="button"
+                    aria-pressed={year === value}
+                    disabled={count === 0 && year !== value}
+                    onClick={() => handleYearChange(value)}
+                    className={pillClass(year === value)}
+                  >
+                    {label}
+                    <span className={`ml-2 ${year === value ? "text-neutral-300" : "text-neutral-400"}`}>{count}</span>
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+
+          <motion.div
+            key={`${filter}-${year}`}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className="grid md:grid-cols-2 gap-12"
+          >
+            {visibleItems.map((item) => (
               <div key={item.id} className="space-y-6">
                 {/* Media Container */}
                 <div className="relative aspect-video bg-neutral-200 overflow-hidden rounded-lg">
@@ -306,7 +414,7 @@ export default function Gallery() {
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </section>
 
         {/* Divider */}

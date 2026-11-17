@@ -136,6 +136,7 @@ The gallery now includes a collection of photos from our collaboration at the Ma
 - **Optimized Loading:** Photos are served from the local `/public/gallery/photos/` directory
 
 ### General Features
+- **Filters:** above the grid, by type (All / Videos / Photos) and by year (All years / 2025 / 2026 ...), with a count on each button. They read each item's `type` and `year`, and the year buttons are built from the years present, so a new year appears on its own. Give each new item its `year` (for videos, the year of the event; the existing videos use their YouTube upload year). An item with no `year` (the four Maker Festival photos, whose date is not confirmed) shows only under "All years"
 - **Responsive Design:** Gallery adapts to different screen sizes
 - **Accessibility:** Proper alt text, ARIA labels, and keyboard navigation support
 - **Mixed Content:** Seamless integration of videos and photos in the same gallery layout
@@ -173,12 +174,12 @@ The gallery page is accessible at `/gallery` and displays all videos in a respon
 ### Adding New Content:
 
 **To add new videos:**
-1. Update the `galleryItems` array in `app/gallery/page.tsx`
+1. Update the `galleryItems` array in `app/gallery/page.tsx`, including the `year` of the event
 2. Add the new video information to this README
 3. Ensure the YouTube link follows the format `https://youtu.be/{VIDEO_ID}`
 
 **To add new photos:**
 1. Upload photos to the appropriate subdirectory in `public/gallery/photos/`
-2. Update the `galleryItems` array in `app/gallery/page.tsx` with type: "photo"
+2. Update the `galleryItems` array in `app/gallery/page.tsx` with type: "photo" and the `year` it was taken
 3. Add the new photo information to this README
 4. Ensure photos follow the naming convention and quality guidelines 

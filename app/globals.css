@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Keep the scrollbar's space reserved, so pages don't shift sideways when the
+   home page locks and unlocks scrolling. */
+html {
+  scrollbar-gutter: stable;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
