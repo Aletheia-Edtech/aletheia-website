@@ -191,6 +191,24 @@ export default function Gallery() {
         "\"Individually, we are one drop. Together, we are an ocean\", says Ryunosuke Satoro. STEM for All x SparkOS is part of United Nations Sustainable Development Goals to create an immense and powerful impact for people and planet (animals included). A collaboration with Zhengxin, Beijing.",
       speaker: "STEM for All x SparkOS Team and Zhengxin, Beijing",
     },
+    {
+      id: 17,
+      type: "photo",
+      src: "/gallery/photos/events/stem-for-all-canossaville-june-2026.jpg",
+      title: "STEM for All x Canossaville Children and Community Services",
+      description:
+        "Turning 'I wonder how' into 'Look what I built!', because genius lives everywhere. A hands-on build-a-robot programme using Micro:bit.",
+      speaker: "In partnership with Canossaville Children and Community Services · June 2026",
+    },
+    {
+      id: 18,
+      type: "photo",
+      src: "/gallery/photos/events/stem-for-all-chij-sanctuary-september-2026.jpg",
+      title: "STEM for All x CHIJ Sanctuary for Children",
+      description:
+        "Building tomorrow's tech leaders, one fun STEM programme at a time.",
+      speaker: "In partnership with CHIJ Sanctuary for Children · September 2026",
+    },
   ]
 
   return (

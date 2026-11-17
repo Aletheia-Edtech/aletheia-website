@@ -111,6 +111,18 @@ The gallery now includes a collection of photos from our collaboration at the Ma
 
 ---
 
+### Singapore Programmes 2026
+
+#### 1. STEM for All x Canossaville Children and Community Services (June 2026)
+**File:** `stem-for-all-canossaville-june-2026.jpg`
+**Description:** Turning 'I wonder how' into 'Look what I built!', because genius lives everywhere. A hands-on build-a-robot programme using Micro:bit.
+
+#### 2. STEM for All x CHIJ Sanctuary for Children (September 2026)
+**File:** `stem-for-all-chij-sanctuary-september-2026.jpg`
+**Description:** Building tomorrow's tech leaders, one fun STEM programme at a time.
+
+---
+
 ## Technical Implementation
 
 ### Video Features
