@@ -136,7 +136,7 @@ The gallery now includes a collection of photos from our collaboration at the Ma
 - **Optimized Loading:** Photos are served from the local `/public/gallery/photos/` directory
 
 ### General Features
-- **Filters:** above the grid, by type (All / Videos / Photos) and by year (All years / 2025 / 2026 ...), with a count on each button. They read each item's `type` and `year`, and the year buttons are built from the years present, so a new year appears on its own. Give each new item its `year` (for videos, the year of the event; the existing videos use their YouTube upload year). An item with no `year` (the four Maker Festival photos, whose date is not confirmed) shows only under "All years"
+- **Filters:** above the grid, by type (All / Videos / Photos) and by year (All years / 2024 / 2025 / 2026 ...), with a count on each button. They read each item's `type` and `year`, and the year buttons are built from the years present, so a new year appears on its own. Give each new item its `year` (for videos, the year of the event; the existing videos use their YouTube upload year). An item with no `year` shows only under "All years"
 - **Responsive Design:** Gallery adapts to different screen sizes
 - **Accessibility:** Proper alt text, ARIA labels, and keyboard navigation support
 - **Mixed Content:** Seamless integration of videos and photos in the same gallery layout

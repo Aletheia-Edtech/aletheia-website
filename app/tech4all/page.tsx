@@ -57,7 +57,7 @@ const AUDIENCES: { icon: LucideIcon; title: string; text: string; points: string
     icon: Building2,
     title: "Organisation",
     text: "Privacy-first insight for admins across classes and schools, with bilingual learning that scales from one pilot to many sites.",
-    points: ["Privacy-first", "Chinese & English", "Built to scale"],
+    points: ["Privacy-first", "Built to scale"],
   },
 ]
 
@@ -397,15 +397,17 @@ function Audiences() {
             className="h-full"
           >
             <div
-              className={`group h-full flex flex-col p-5 md:p-7 transition-transform duration-300 hover:-translate-y-1 ${SOFT_CARD}`}
+              className={`group h-full flex flex-col p-5 md:p-6 transition-transform duration-300 hover:-translate-y-1 ${SOFT_CARD}`}
             >
-              <span className="text-[1.9rem] md:text-[2.4rem] font-normal leading-none tracking-tight text-neutral-300/80">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <span className="mt-5 inline-flex h-14 w-14 md:h-16 md:w-16 items-center justify-center rounded-[1.25rem] bg-neutral-50/95 text-neutral-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_10px_18px_rgba(0,0,0,0.04)]">
-                <Icon className="h-7 w-7" aria-hidden="true" />
-              </span>
-              <h3 className="mt-5 text-xl md:text-2xl font-normal tracking-tight text-neutral-900">{title}</h3>
+              <div className="flex items-center justify-between">
+                <span className="inline-flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-[1.1rem] bg-neutral-50/95 text-neutral-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_10px_18px_rgba(0,0,0,0.04)]">
+                  <Icon className="h-6 w-6 md:h-7 md:w-7" aria-hidden="true" />
+                </span>
+                <span className="text-[1.9rem] md:text-[2.4rem] font-normal leading-none tracking-tight text-neutral-300/80">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+              </div>
+              <h3 className="mt-4 text-xl md:text-2xl font-normal tracking-tight text-neutral-900">{title}</h3>
               <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{text}</p>
               <ul className="mt-4 flex flex-wrap gap-2" aria-label={`${title} highlights`}>
                 {points.map((point) => (
@@ -417,9 +419,6 @@ function Audiences() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-auto pt-6">
-                <div className="h-px w-12 bg-neutral-300 transition-all duration-300 group-hover:w-20 group-hover:bg-neutral-500" />
-              </div>
             </div>
           </motion.li>
         ))}

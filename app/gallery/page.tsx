@@ -142,6 +142,7 @@ export default function Gallery() {
     {
       id: 8,
       type: "photo",
+      year: 2024,
       src: "/gallery/photos/events/STEM for All x Maker Festival 2024.jpg",
       title: "Suncare: Engaging with Scratch",
       description:
@@ -151,6 +152,7 @@ export default function Gallery() {
     {
       id: 9,
       type: "photo",
+      year: 2024,
       src: "/gallery/photos/events/STEM for All x Maker Festival 2024 (2).JPG",
       title: "Maker Festival 2024 - Interactive Workshops",
       description:
@@ -160,6 +162,7 @@ export default function Gallery() {
     {
       id: 10,
       type: "photo",
+      year: 2024,
       src: "/gallery/photos/events/STEM for All x Maker Festival 2024 (3).JPG",
       title: "Community Engagement at Maker Festival 2024",
       description:
@@ -169,6 +172,7 @@ export default function Gallery() {
     {
       id: 11,
       type: "photo",
+      year: 2024,
       src: "/gallery/photos/events/STEM for All x Maker Festival 2024 (4).jpg",
       title: "Maker Festival 2024 - Closing Celebration",
       description:
