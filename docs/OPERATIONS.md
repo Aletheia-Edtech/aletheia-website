@@ -8,7 +8,7 @@
 | Domain `aletheia.sg` | The public address | The domain registrar and its DNS settings, pointing at Render |
 | EmailJS | Sends contact-form messages to our inbox | EmailJS dashboard: the email service, the template and the public key |
 | Google reCAPTCHA | Protects the contact form from bots | reCAPTCHA admin console: the site key for `aletheia.sg` |
-| GitHub | The code | The `saraundre/aletheia--website` repository |
+| GitHub | The code | The `Aletheia-Edtech/aletheia-website` repository. Render reads it through the Render app installed on the organisation |
 
 The repo does not record which person's login each service uses. When handing the site over, list the owner of
 each login above and move it to a shared company account.
