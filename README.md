@@ -3,10 +3,6 @@
 The public website of Aletheia, live at https://aletheia.sg. A static Next.js site: no server and no database.
 Every page is built to plain HTML at deploy time.
 
-## Who built it
-
-Sara Undre ([@saraundre](https://github.com/saraundre)) started the site in June 2025, and she and Ahmad Pathan ([@PathanAhmad](https://github.com/PathanAhmad)) wrote most of it: 46 commits by Ahmad and 40 by Sara, out of 112. [@GeniusN281](https://github.com/GeniusN281) and [@mahmoudrules](https://github.com/mahmoudrules) wrote 13 each. In November 2026 Sara redesigned the Tech4All page and added the gallery's filters and the smoother scrolling on the home page.
-
 ## Pages
 
 | Route | Source | What it shows |
