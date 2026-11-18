@@ -3,6 +3,10 @@
 The public website of Aletheia, live at https://aletheia.sg. A static Next.js site: no server and no database.
 Every page is built to plain HTML at deploy time.
 
+## Who built it
+
+Sara Undre ([@saraundre](https://github.com/saraundre)) started the site in June 2025, and she and Ahmad Pathan ([@PathanAhmad](https://github.com/PathanAhmad)) wrote most of it: 46 commits by Ahmad and 40 by Sara, out of 112. [@GeniusN281](https://github.com/GeniusN281) and [@mahmoudrules](https://github.com/mahmoudrules) wrote 13 each. In November 2026 Sara redesigned the Tech4All page and added the gallery's filters and the smoother scrolling on the home page.
+
 ## Pages
 
 | Route | Source | What it shows |
@@ -66,5 +70,6 @@ redeploys it. `render.yaml` also sets the security headers.
 
 ## Ownership
 
-This repository sits on the `saraundre` GitHub account, not in the Aletheia-Smart-Solutions organisation. The
-Render service, the domain and the EmailJS and reCAPTCHA accounts are separate logins; check who holds each.
+This repository is in the Aletheia-Edtech GitHub organisation (moved from the `saraundre` account on 2026-11-18).
+Render reads it through the Render app installed on the organisation. The Render service, the domain and the EmailJS
+and reCAPTCHA accounts are separate logins; check who holds each.
