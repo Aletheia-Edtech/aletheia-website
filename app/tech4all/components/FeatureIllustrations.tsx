@@ -252,27 +252,27 @@ function VoiceInterface() {
 
   return (
     <g>
-      {/* Student */}
+      {/* Student, on the right like the sender in a chat app */}
       <motion.g {...pop(0.1)}>
-        <circle cx={32} cy={52} r={14} fill={SOFT} stroke={INK} strokeWidth={2} />
-        <circle cx={32} cy={48} r={4.5} fill={INK} />
-        <path d="M24 61 a8 7 0 0 1 16 0" fill={INK} />
-        <rect x={54} y={30} width={214} height={44} rx={16} fill={SOFT} stroke={LINE} strokeWidth={1.5} />
-        <text x={70} y={57} fontSize={13.5} fill={INK}>
+        <rect x={92} y={30} width={214} height={44} rx={16} fill={SOFT} stroke={LINE} strokeWidth={1.5} />
+        <text x={108} y={57} fontSize={13.5} fill={INK}>
           I don&apos;t understand fractions
         </text>
+        <circle cx={328} cy={52} r={14} fill={SOFT} stroke={INK} strokeWidth={2} />
+        <circle cx={328} cy={48} r={4.5} fill={INK} />
+        <path d="M320 61 a8 7 0 0 1 16 0" fill={INK} />
       </motion.g>
 
-      {/* AI */}
+      {/* AI, replying on the left */}
       <motion.g {...pop(0.8)}>
-        <rect x={94} y={96} width={214} height={44} rx={16} fill={BLUE_SOFT} stroke={BLUE} strokeWidth={1.5} />
-        <text x={110} y={123} fontSize={13.5} fill={INK}>
+        <circle cx={32} cy={118} r={14} fill={BLUE_SOFT} stroke={BLUE} strokeWidth={2} />
+        <circle cx={27} cy={116} r={2.5} fill={INK} />
+        <circle cx={37} cy={116} r={2.5} fill={INK} />
+        <path d="M27 123 Q32 127 37 123" stroke={INK} strokeWidth={1.5} fill="none" strokeLinecap="round" />
+        <rect x={54} y={96} width={214} height={44} rx={16} fill={BLUE_SOFT} stroke={BLUE} strokeWidth={1.5} />
+        <text x={70} y={123} fontSize={13.5} fill={INK}>
           Let&apos;s build a pizza together!
         </text>
-        <circle cx={330} cy={118} r={14} fill={BLUE_SOFT} stroke={BLUE} strokeWidth={2} />
-        <circle cx={325} cy={116} r={2.5} fill={INK} />
-        <circle cx={335} cy={116} r={2.5} fill={INK} />
-        <path d="M325 123 Q330 127 335 123" stroke={INK} strokeWidth={1.5} fill="none" strokeLinecap="round" />
       </motion.g>
 
       {/* Pizza, one slice at a time */}
